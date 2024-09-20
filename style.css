@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to top,pink,aqua);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+}
+
+.card {
+    background-image: linear-gradient(to top,pink,aqua);
+    border-radius: 15px;
+    backdrop-filter: blur(2000px); 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 24px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" align="center">
+            <h1>Palindrome Checker</h1>
+            <input id="one" placeholder="Enter any value" onkeyup="check()">
+            <h1 id="two">Result</h1>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            var a = document.getElementById("one").value; 
+            var d = document.getElementById("two");
+
+            if (a.length === 0) {
+                d.textContent = "Input is empty"; 
+                d.style.color = "black"; 
+            } else {
+                var rev = a.split("").reverse().join(""); 
+                
+                if (a === rev) {
+                    d.textContent = "It's a Palindrome";
+                    d.style.color = "green";
+                } else {
+                    d.textContent = "It's not a Palindrome";
+                    d.style.color = "red";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
