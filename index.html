@@ -17,16 +17,17 @@
 
     <script>
         function check() {
-            var a = document.getElementById("one").value; 
+            var a = document.getElementById("one").value; // Get the input value
             var d = document.getElementById("two");
 
             if (a.length === 0) {
-                d.textContent = "Input is empty"; 
-                d.style.color = "black"; 
+                d.textContent = "Input is empty"; // Display message if input is empty
+                d.style.color = "black"; // Optional: Set color for empty input message
             } else {
-                var rev = a.split("").reverse().join(""); 
+                var normalizedInput = a.toLowerCase(); // Normalize to lowercase
+                var rev = normalizedInput.split("").reverse().join(""); // Reverse the normalized input
                 
-                if (a === rev) {
+                if (normalizedInput === rev) {
                     d.textContent = "It's a Palindrome";
                     d.style.color = "green";
                 } else {
